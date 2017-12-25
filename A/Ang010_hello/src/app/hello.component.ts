@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 
 export class HelloComponent {
 
-  helloText = 'Привет';
+  helloText:string = 'Привет';
 
-  getMyName = () => {
+  getMyName():string {
     return "Васечкин";
   };
 
