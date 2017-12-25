@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class HotelComponent {
 
-  private hotelName:string = 'California';
+  private hotelName:string='California';
 
   private rooms:Array<{num:number,beds:number}>=[
     { num:22, beds:2 },
@@ -21,14 +21,13 @@ export class HotelComponent {
 
   constructor() {
     setTimeout(()=>{
-      this.photo="http://fe.it-academy.by/Examples/Hotel/hotel2.jpg";
       this.hotelName="Heartbreak Hotel";
     },3000);
   }
 
   getName():string {
     return this.hotelName;
-  };
+  }
 
   getRooms():string {
     return this.rooms

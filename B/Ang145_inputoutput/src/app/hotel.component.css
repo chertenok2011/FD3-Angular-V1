@@ -7,16 +7,3 @@ div.Hotel {
 div.Photo {
   margin-bottom: 20px;
 }
-
-.RedBorder {
-  border: solid red 1px;
-}
-
-.SmallImage {
-  width: 200px;
-}
-
-.YellowRed {
-  backgroundColor: yellow;
-  color: red;
-}
