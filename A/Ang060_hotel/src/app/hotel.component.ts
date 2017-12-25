@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 
 export class HotelComponent {
 
-  name:string = 'California';
+  hotelName:string = 'California';
 
 }
