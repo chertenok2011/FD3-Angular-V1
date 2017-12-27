@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChange, Output, EventEmitter } from '@angular/core';
+import { Component, Input, SimpleChange } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -9,18 +9,11 @@ import { Component, Input, SimpleChange, Output, EventEmitter } from '@angular/c
 
 export class HotelStarsComponent {
 
-  @Input("stars")
+  @Input("starsinput")
   private stars:number;
-
-  @Output("starsChange")
-  private starsOutputEE=new EventEmitter<number>();
 
   getStars():number {
     return this.stars;
-  }
-
-  setStars(s:number):void {
-    this.starsOutputEE.emit(s);
   }
 
   ngOnChanges(changes: { [property: string]: SimpleChange }) { 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm} from '@angular/forms';
 
 @Component({
   moduleId: module.id,
@@ -19,15 +20,7 @@ export class HotelComponent {
 
   private photo:string="http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
 
-  private _stars:number=4;
-
-  get stars():number {
-    return this._stars;
-  };
-
-  set stars(s:number) {
-    this._stars=s;
-  }
+  private stars:number=4;
 
   getName():string {
     return this.hotelName;
@@ -44,5 +37,21 @@ export class HotelComponent {
     return this.photo;
   };
 
+  getStars():number {
+    return this.stars;
+  };
+
+  setStars(s:number):void {
+    this.stars=s;
+  }
+
+  testSubmit(frm:NgForm) {
+    let newHotelName:string=frm.value.newhotelname;
+    let newStars:number=parseInt(frm.value.newstars);
+    if ( frm.valid) {
+      this.hotelName=newHotelName;
+      this.stars=newStars;
+    }
+  }
 
 }
