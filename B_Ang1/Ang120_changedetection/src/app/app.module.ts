@@ -11,5 +11,4 @@ import { HotelComponent } from './hotel.component';
   providers: [],
   bootstrap: [HotelComponent]
 })
-
 export class AppModule { }

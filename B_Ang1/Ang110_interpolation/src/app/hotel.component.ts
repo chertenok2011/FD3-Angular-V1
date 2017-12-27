@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: 'hotel.component.html',
   styleUrls: ['hotel.component.css']
 })
-
 export class HotelComponent {
 
   private hotelName:string = 'California';
