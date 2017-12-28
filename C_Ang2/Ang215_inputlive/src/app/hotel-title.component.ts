@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChange } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -10,6 +10,14 @@ export class HotelTitleComponent {
 
   @Input("hotel-name")
   private hotelName:string;
+
+  ngOnChanges(changes: {[property: string]: SimpleChange }) { 
+    // получим изменения только входного свойства hotelName
+    let change=changes["hotelName"];
+    // SimpleChange содержит:                                        
+    // currentValue - текущее значение входного свойства
+    console.log('атрибут hotel-name получил новое значение: '+change.currentValue);
+  }
 
   getName():string {
     return this.hotelName;
