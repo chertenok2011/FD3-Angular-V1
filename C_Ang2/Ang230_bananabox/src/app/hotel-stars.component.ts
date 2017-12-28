@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChange, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -20,10 +20,6 @@ export class HotelStarsComponent {
 
   setStars(s:number):void {
     this.starsOutputEE.emit(s);
-  }
-
-  ngOnChanges(changes: { [property: string]: SimpleChange }) { 
-    this.stars=changes["stars"].currentValue;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChange, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -25,13 +25,6 @@ export class HotelTitleComponent {
 
   getName():string {
     return this.hotelName;
-  }
-
-  // метод получит изменения всех привязанных свойств
-  ngOnChanges(changes: { [property: string]: SimpleChange }) { 
-    // получаем изменения нужного свойства
-    let hotelNameChange:SimpleChange=changes["hotelName"];
-    this.hotelName=hotelNameChange.currentValue;
   }
 
 }

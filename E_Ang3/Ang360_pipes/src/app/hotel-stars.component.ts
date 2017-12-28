@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChange } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -13,10 +13,6 @@ export class HotelStarsComponent {
 
   getStars():number {
     return this.stars;
-  }
-
-  ngOnChanges(changes: { [property: string]: SimpleChange }) { 
-    this.stars=changes["stars"].currentValue;
   }
 
 }
