@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   moduleId: module.id,
@@ -10,16 +11,31 @@ export class HotelComponent {
 
   public hotelName:string='California';
 
-  private rooms:Array<{num:number,beds:number}>=[
-    { num:22, beds:2 },
-    { num:25, beds:1 },
-    { num:28, beds:4 },
-  ];
+  private rooms:Array<{num:number,beds:number}>=[];
+
+  private slogan:string='';
 
   private photo:string="http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
 
-  constructor() {
-    //setInterval(()=>{console.log('timer')},3000);
+  constructor(private http1:HttpClient, private http2:HttpClient) {
+  }
+
+  ngOnInit() {
+    this.http1
+      .get('http://fe.it-academy.by/Examples/rooms.json')
+      .subscribe( (data)=>{ 
+        console.log(data); 
+        this.rooms=<Array<{num:number,beds:number}>>data;
+      } )
+      ;
+    this.http2
+      .get('http://fe.it-academy.by/Examples/test.txt', 
+        {responseType: 'text'})
+      .subscribe( (data)=>{ 
+        console.log(data); 
+        this.slogan=data;
+      } )
+      ;
   }
 
   getRooms():string {
@@ -31,6 +47,10 @@ export class HotelComponent {
 
   getPhoto():string {
     return this.photo;
+  };
+
+  getSlogan():string {
+    return this.slogan;
   };
 
 }

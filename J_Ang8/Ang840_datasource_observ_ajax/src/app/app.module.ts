@@ -5,13 +5,14 @@ import { HttpClientModule }   from '@angular/common/http';
 
 import { HotelComponent } from './hotel.component';
 import { HotelTitleComponent } from './hotel-title.component';
+import { HotelDatasource } from './hotel.datasource';
 
 @NgModule({
   declarations: [
     HotelComponent, HotelTitleComponent
   ],
   imports: [ BrowserModule, FormsModule, HttpClientModule ],
-  providers: [],
+  providers: [ HotelDatasource ],
   bootstrap: [HotelComponent]
 })
 export class AppModule { }
