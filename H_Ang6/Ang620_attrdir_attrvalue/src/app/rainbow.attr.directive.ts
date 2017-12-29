@@ -1,4 +1,4 @@
-﻿import { Directive, ElementRef, Input } from "@angular/core"; 
+﻿import { Directive, ElementRef, Input, Attribute } from "@angular/core"; 
 
 @Directive({ 
   selector: "[rainbow]", 
@@ -10,11 +10,12 @@ export class RainbowDirective {
   @Input("rainbow")
   private startColor:string;
 
-  constructor(private element: ElementRef) {
+  constructor(private element: ElementRef, 
+    @Attribute("rainbow-period") timerInterval: number) {
 
     // к этому моменту startColor ещё не готов
 
-    setInterval( ()=>{ this.setRandomColor() },2000);
+    setInterval( ()=>{ this.setRandomColor() },timerInterval);
   } 
 
   ngAfterViewInit():void {
