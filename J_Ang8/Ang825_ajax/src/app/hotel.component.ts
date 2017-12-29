@@ -22,14 +22,14 @@ export class HotelComponent {
 
   ngOnInit() {
     this.http1
-      .get('http://fe.it-academy.by/Examples/rooms.json')
+      .get('http://fe.it-academy.by/Examples/Hotel/rooms.json')
       .subscribe( (data)=>{ 
         console.log(data); 
         this.rooms=<Array<{num:number,beds:number}>>data;
       } )
       ;
     this.http2
-      .get('http://fe.it-academy.by/Examples/test.txt', 
+      .get('http://fe.it-academy.by/Examples/Hotel/slogan.txt', 
         {responseType: 'text'})
       .subscribe( (data)=>{ 
         console.log(data); 
