@@ -7,10 +7,10 @@ import { HotelTitleComponent } from './hotel-title.component';
 import { LoggerService } from './logger.service';
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent, HotelTitleComponent
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [LoggerService],
   bootstrap: [HotelComponent]
 })

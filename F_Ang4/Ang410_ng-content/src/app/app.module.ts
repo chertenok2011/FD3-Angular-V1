@@ -8,10 +8,11 @@ import { HotelStarsComponent } from './hotel-stars.component';
 import { HotelSloganComponent } from './hotel-slogan.component';
 
 @NgModule({
-  declarations: [
-    HotelComponent, HotelTitleComponent, HotelStarsComponent, HotelSloganComponent
-  ],
   imports: [ BrowserModule, FormsModule ],
+  declarations: [
+    HotelComponent, HotelTitleComponent, 
+    HotelStarsComponent, HotelSloganComponent,
+  ],
   providers: [],
   bootstrap: [HotelComponent]
 })

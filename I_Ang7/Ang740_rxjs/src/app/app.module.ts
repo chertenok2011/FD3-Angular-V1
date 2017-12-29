@@ -9,11 +9,11 @@ import { LikesButtonsComponent } from './likes-buttons.component';
 import { LikeEventsService } from './like-events.service';
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent, HotelTitleComponent, 
     LikesCounterComponent, LikesButtonsComponent
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [ LikeEventsService ],
   bootstrap: [HotelComponent]
 })

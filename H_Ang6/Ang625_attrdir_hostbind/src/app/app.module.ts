@@ -7,10 +7,10 @@ import { HotelTitleComponent } from './hotel-title.component';
 import { RainbowDirective } from './rainbow.attr.directive';
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent, HotelTitleComponent, RainbowDirective
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [ ],
   bootstrap: [HotelComponent]
 })

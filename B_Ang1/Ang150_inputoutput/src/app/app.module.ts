@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { HotelComponent } from './hotel.component';
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [],
   bootstrap: [HotelComponent]
 })

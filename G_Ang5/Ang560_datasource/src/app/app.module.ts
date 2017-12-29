@@ -10,10 +10,10 @@ let heartBreakHotel:HotelDatasource=new HotelDatasource();
 heartBreakHotel.setName("Heartbreak Hotel");
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent, HotelTitleComponent
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [
     {provide:HotelDatasource, useValue: heartBreakHotel},
   ],

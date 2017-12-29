@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { HelloComponent } from './hello.component';
 
 @NgModule({
+  imports: [ BrowserModule ],
   declarations: [
     HelloComponent
   ],
-  imports: [ BrowserModule ],
   providers: [],
   bootstrap: [HelloComponent]
 })

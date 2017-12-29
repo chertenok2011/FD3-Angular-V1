@@ -6,10 +6,10 @@ import { HotelComponent } from './hotel.component';
 import { HotelTitleComponent } from './hotel-title.component';
 
 @NgModule({
+  imports: [ BrowserModule, FormsModule ],
   declarations: [
     HotelComponent, HotelTitleComponent
   ],
-  imports: [ BrowserModule, FormsModule ],
   providers: [],
   bootstrap: [HotelComponent]
 })

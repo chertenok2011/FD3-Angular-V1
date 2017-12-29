@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { HotelComponent } from './hotel.component';
 
 @NgModule({
+  imports: [ BrowserModule ],
   declarations: [
     HotelComponent
   ],
-  imports: [ BrowserModule ],
   providers: [],
   bootstrap: [HotelComponent]
 })
