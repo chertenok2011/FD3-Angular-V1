@@ -17,7 +17,8 @@ export class HotelComponent {
 
   private photo:string="http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
 
-  constructor(private http1:HttpClient, private http2:HttpClient) {
+  constructor(private http1:HttpClient, 
+    private http2:HttpClient) {
   }
 
   ngOnInit() {
@@ -25,7 +26,8 @@ export class HotelComponent {
       .get('http://fe.it-academy.by/Examples/Hotel/rooms.json')
       .subscribe( (data)=>{ 
         console.log(data); 
-        this.rooms=<Array<{num:number,beds:number}>>data;
+        this.rooms
+          =<Array<{num:number,beds:number}>>data;
       } )
       ;
     this.http2

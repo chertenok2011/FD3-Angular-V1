@@ -13,7 +13,8 @@ export class LikesCounterComponent {
   private likesCounter:number=0;
 
   constructor(events:LikeEventsService) {
-    events.getSubject().subscribe(this.nextLike.bind(this));
+    events.getSubject()
+      .subscribe(this.nextLike.bind(this));
   }
 
   nextLike(like:number):void {

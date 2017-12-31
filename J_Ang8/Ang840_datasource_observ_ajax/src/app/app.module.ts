@@ -8,7 +8,9 @@ import { HotelTitleComponent } from './hotel-title.component';
 import { HotelDatasource } from './hotel.datasource';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, HttpClientModule ],
+  imports: [ BrowserModule, 
+    FormsModule, HttpClientModule 
+  ],
   declarations: [
     HotelComponent, HotelTitleComponent
   ],

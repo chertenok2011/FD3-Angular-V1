@@ -9,8 +9,8 @@ import { StarsPipe } from './stars.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
-  declarations: [
-    HotelComponent, HotelTitleComponent, HotelStarsComponent, StarsPipe
+  declarations: [ HotelComponent, HotelTitleComponent, 
+    HotelStarsComponent, StarsPipe
   ],
   providers: [],
   bootstrap: [HotelComponent]

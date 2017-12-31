@@ -7,7 +7,9 @@ import { HotelComponent } from './hotel.component';
 import { HotelTitleComponent } from './hotel-title.component';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, HttpClientModule ],
+  imports: [ BrowserModule, 
+    FormsModule, HttpClientModule 
+  ],
   declarations: [
     HotelComponent, HotelTitleComponent
   ],

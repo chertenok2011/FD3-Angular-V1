@@ -8,8 +8,8 @@ import { RainbowDirective } from './rainbow.attr.directive';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
-  declarations: [
-    HotelComponent, HotelTitleComponent, RainbowDirective
+  declarations: [ HotelComponent, 
+    HotelTitleComponent, RainbowDirective
   ],
   providers: [ ],
   bootstrap: [HotelComponent]

@@ -16,8 +16,10 @@ export class HotelRoomInfoComponent {
 
   constructor(private datasource:HotelDatasource,
     activeRoute: ActivatedRoute) {
-    this.roomNum=parseInt(activeRoute.snapshot.params['num']);
-    this.room=datasource.getRooms().filter(room=>(room.num==this.roomNum))[0];
+    this.roomNum=parseInt(
+      activeRoute.snapshot.params['num']);
+    this.room=datasource.getRooms()
+      .filter(room=>(room.num==this.roomNum))[0];
   }
 
   getNum():number {
