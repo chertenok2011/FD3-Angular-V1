@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'hello',
-  templateUrl: './hello.component.html',
-  styleUrls: ['./hello.component.css']
+  template: '<h1>{{ helloText + ", " + getMyName() + "!" }}</h1>',
+  styles: ['h1 { color: red }']
 })
 export class HelloComponent {
 

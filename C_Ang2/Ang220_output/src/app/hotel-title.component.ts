@@ -12,10 +12,10 @@ export class HotelTitleComponent {
   private hotelName:string;
 
   @Output("like-add")
-  private likeAdd=new EventEmitter<number>();
+  private likeAdd:EventEmitter<number>=new EventEmitter<number>();
 
   @Output("like-reset")
-  public likeReset=new EventEmitter<void>();
+  public likeReset:EventEmitter<void>=new EventEmitter<void>();
 
   constructor() {
     setInterval(()=>{

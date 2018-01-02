@@ -14,7 +14,7 @@ export class HotelTitleComponent {
   ngOnChanges(changes: {[property: string]: SimpleChange }) { 
     // получим изменения только свойства hotelName,
     // связанного с входным свойством
-    let change=changes["hotelName"];
+    let change:SimpleChange=changes["hotelName"];
     // SimpleChange содержит:                                        
     // currentValue - текущее значениесвойства
     console.log('атрибут hotel-name получил новое значение: '
