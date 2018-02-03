@@ -10,38 +10,38 @@ import { LoggerService } from './logger.service';
 })
 export class HotelComponent {
 
-  public hotelName:string='California';
+  public hotelName: string = 'California';
 
-  private rooms:Array<{num:number,beds:number}>=[
-    { num:22, beds:2 },
-    { num:25, beds:1 },
-    { num:28, beds:4 },
+  private rooms: Array<{ num: number, beds: number }> = [
+    { num: 22, beds: 2 },
+    { num: 25, beds: 1 },
+    { num: 28, beds: 4 },
   ];
 
-  private photo:string="http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
+  private photo: string = "http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
 
-  private logger:LoggerService;
+  private logger: LoggerService;
 
-  constructor(_logger:LoggerService) {
-    this.logger=_logger;
+  constructor(_logger: LoggerService) {
+    this.logger = _logger;
   }
 
-  getRooms():string {
+  getRooms(): string {
     return this.rooms
-      .map( room => "N"+room.num+"("+room.beds+"b)" )
+      .map(room => "N" + room.num + "(" + room.beds + "b)")
       .join("\n")
       ;
   };
 
-  getPhoto():string {
+  getPhoto(): string {
     return this.photo;
   };
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.logger.log("HotelComponent init");
   }
 
-  like():void {
+  like(): void {
     this.logger.log("like!!!");
   }
 
